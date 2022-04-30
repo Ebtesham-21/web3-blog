@@ -1,5 +1,5 @@
 const {expect} = require("chai")
-const {ethers} = requiere("hardhat")
+const {ethers} = require("hardhat")
 
 describe("Blog", async function() {
   it("Should create a post", async function(){
@@ -12,7 +12,7 @@ describe("Blog", async function() {
     expect(posts[0].title).to.equal("My first post")
   })
   it("Should edit a post", async function(){
-    const Blow = await ethers.getContractFactory("Blog")
+    const Blog = await ethers.getContractFactory("Blog")
     const blog = await Blog.deploy("My blog")
     await blog.deployed()
     await blog.createPost("My second post", "12345")

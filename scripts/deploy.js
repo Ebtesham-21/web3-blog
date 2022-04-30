@@ -1,7 +1,7 @@
 /* scripts/deploy.js */
 const hre = require("hardhat");
 const fs = require('fs');
-
+const { ethers } = require('hardhat');
 async function main() {
   /* these two lines deploy the contract to the network */
   const Blog = await hre.ethers.getContractFactory("Blog");
